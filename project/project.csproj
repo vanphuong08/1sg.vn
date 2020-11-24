@@ -88,12 +88,108 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\about-video.jpg" />
+    <Content Include="Assets\css\analytics.js" />
+    <Content Include="Assets\css\app-screen-a.jpg" />
+    <Content Include="Assets\css\appuntamenti.png" />
+    <Content Include="Assets\css\asoggetti-296085-unsplash %281%29.jpg" />
+    <Content Include="Assets\css\calendario.png" />
+    <Content Include="Assets\css\clienti.jpg" />
+    <Content Include="Assets\css\common.js" />
+    <Content Include="Assets\css\googleMap-ver=130.js" />
+    <Content Include="Assets\css\jquery.bundle-ver=130.js" />
+    <Content Include="Assets\css\logo.png" />
+    <Content Include="Assets\css\logo_bianco.png" />
+    <Content Include="Assets\css\mdef.png" />
+    <Content Include="Assets\css\membri_staff.jpg" />
+    <Content Include="Assets\css\pagamenti_def.jpg" />
+    <Content Include="Assets\css\photo-team.jpg" />
+    <Content Include="Assets\css\script-ver=130.js" />
+    <Content Include="Assets\css\sdef.png" />
+    <Content Include="Assets\css\servizi.jpg" />
+    <Content Include="Assets\css\software-screen-a.jpg" />
+    <Content Include="Assets\css\software-screen-b.jpg" />
+    <Content Include="Assets\css\software-screen-c.jpg" />
+    <Content Include="Assets\css\software-screen-d.jpg" />
+    <Content Include="Assets\css\style-ver=130.css" />
+    <Content Include="Assets\css\team1.jpg" />
+    <Content Include="Assets\css\theme-royel-teal-ver=130.css" />
+    <Content Include="Assets\css\util.js" />
+    <Content Include="Assets\css\vendor.bundle-ver=130.css" />
+    <Content Include="Assets\css\_logo.png" />
+    <Content Include="Assets\css\_logo_bianco.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template.html" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\about-video.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\analytics.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\app-store.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\application-2.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\application-pro.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\application.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\client-1.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\client-2.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\common.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\controls.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\desktop-app-s1.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\google-play.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\googleMap.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\hs-1.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\hs-2.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\hs-3.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\icon_error.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\jquery.bundle.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\logo-white.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\logo.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\map.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\marker.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\mobile-app-s1.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\mobile-app-s2.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\onion.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\pricing-bg.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\quote-icon.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-1.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-2.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-3.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-4.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-5.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\sc-6.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\script.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\style-ver=1.2.css" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\team-a.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\team-b.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\team-c.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\team-d.jpg" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\testimonial-bg.png" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\theme-ver=1.2.css" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\util.js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\vendor.bundle.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\css\js" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\css" />
+    <Content Include="Assets\theme\AppsLand - App Landing HTML Template_files\js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,8 +197,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,10 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
