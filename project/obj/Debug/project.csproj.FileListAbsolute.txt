@@ -70,3 +70,11 @@ D:\1sg.vn\project\obj\Debug\project.csproj.CoreCompileInputs.cache
 D:\1sg.vn\project\obj\Debug\project.csproj.CopyComplete
 D:\1sg.vn\project\obj\Debug\project.dll
 D:\1sg.vn\project\obj\Debug\project.pdb
+D:\1sg.vn\project\bin\EntityFramework.dll
+D:\1sg.vn\project\bin\EntityFramework.SqlServer.dll
+D:\1sg.vn\project\bin\EntityFramework.xml
+D:\1sg.vn\project\bin\EntityFramework.SqlServer.xml
+D:\1sg.vn\project\bin\PagedList.dll
+D:\1sg.vn\project\bin\PagedList.Mvc.dll
+D:\1sg.vn\project\bin\PagedList.xml
+D:\1sg.vn\project\bin\PagedList.Mvc.xml

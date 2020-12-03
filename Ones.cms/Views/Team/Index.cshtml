@@ -1,0 +1,81 @@
+﻿@using Ones.cms.Models;
+@model List<TEAM>
+
+<div class="col-md-12 col-sm-11  ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Table design <small>Custom design</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="x_content">
+
+            <p>Add class <code>bulk_action</code> to table for bulk actions options on row select</p>
+            <a class="btn btn-primary" href="/Team/Create" role="button">ADD NEW</a>
+            <div class="table-responsive">
+                <table class="table table-striped jambo_table bulk_action">
+                    <thead>
+                        <tr class="headings">
+                            <th class="column-title">ID </th>
+                            <th class="column-title">NAME </th>
+                            <th class="column-title">POSITION </th>
+                            <th class="column-title">IMAGE </th>
+                            <th class="column-title">Action </th>
+                            <th class="column-title">Delete </th>
+                            <th class="bulk-actions" colspan="5">
+                                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> )</a>
+                                <a class="del" href="#" style="color:#fff;margin-left:50%; font-weight:500;">Delete All</a>
+
+                            </th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                        <tr class="odd pointer">
+                            <td>@item.ID</td>
+
+                            <td>@item.NAME</td>
+                            <td>@item.POSITION</td>
+                            <td>@item.IMAGE</td>
+                            <td class=" last">
+                                <a href="/Team/Update/@item.ID">Edit</a>
+                            </td>
+                            <td class=" last">
+                                <a href="/Team/Delete/@item.ID">Delete</a>
+                            </td>
+                        </tr>
+                        }
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+

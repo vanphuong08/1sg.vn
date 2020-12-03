@@ -1,0 +1,34 @@
+﻿@Model
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="text-center">ADD HOME</h2>
+        </div>
+        <div class="panel-body" style="margin-left:20%;">
+            <form action="" method="post">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    
+                    <div class="col-md-10">
+                        <input name="TITLE" value="@if (Model != null) { <text>@Model["TITLE"]</text> }" type="text" class="form-control" id="TITLE" placeholder="Bạn muốn thêm mới?">
+                    </div>
+                   
+                    <div class="col-md-10">
+                        <input name="DESCRIPTION" value="@if (Model != null) { <text>@Model["DESCRIPTION"]</text> }" type="text" class="form-control" id="DESCRIPTION" placeholder="Bạn muốn thêm mới?">
+                    </div>
+                   
+                    <div class="col-md-10">
+                        <input name="CONTENT" value="@if (Model != null) { <text>@Model["CONTENT"]</text> }" type="text" class="form-control" id="CONTENT" placeholder="Bạn muốn thêm mới?">
+                    </div>
+                   
+                    <div class="col-md-10">
+                        <input name="IMAGE" value="@if (Model != null) { <text>@Model["IMAGE"]</text> }" type="text" class="form-control" id="IMAGE" placeholder="Bạn muốn thêm mới?">
+                    </div>
+                </div><br />
+                <div class="col-md-2" style="margin:3% 0 0 1%;">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

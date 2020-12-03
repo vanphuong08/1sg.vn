@@ -1,263 +1,291 @@
-﻿<div class="container tab-fix">
-    <div class="section-head text-center">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h2 class="heading">Giới thiệu </h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
-            </div>
-        </div>
-    </div><!-- .section-head -->
-    <div class="row tab-center mobile-center">
-        <div class="col-md-6">
-            <div class="video wow fadeInLeft" data-wow-duration=".5s"
-                 style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
-                <img src="./Ski4you - gestionale prenotazione online scuole sci_files/about-video.jpg"
-                     alt="about-video">
-                <div class="video-overlay gradiant-background"></div>
-                <a href="https://www.ski4you.it/definitivo_gest.mp4" class="video-play"
-                   data-effect="mfp-3d-unfold"><i class="fa fa-play"></i></a>
-            </div>
-        </div><!-- .col -->
-        <div class="col-md-6">
-            <div class="txt-entry">
-                <h3>Khái quát</h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
+﻿
+@using project.Models;
+@functions{
+    public DataContext db = new DataContext();
+    public List<TEAM> GetDb()
+    {
+        var list_team = db.TEAMs.ToList();
+        return list_team;
+    }
+    public List<CONTACT> GetDbContact()
+    {
+        var list_contacts = db.CONTACTs.ToList();
+        return list_contacts;
+    }
+    public List<HOME> GetDbHOME()
+    {
+        var list_home = db.HOMEs.ToList();
+        return list_home;
+    }
+}
 
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
-</div><!-- .about-section  -->
-<!-- Start .features-section  -->
-<div id="features" class="features-section section gradiant-background overflowvisible">
-    <div class="container tab-fix">
-        <div class="features-content pt-10">
-            <div class="row">
-                <div class="col-md-12 pull-left">
-                    <div class="section-head heading-light mobile-center tab-center">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2 class="heading heading-light">Về chúng tôi</h2>
-                                <p>
-                                    SOLUTIONS là một mạng lưới các kỹ sư phần mềm được kết nối, trẻ trung và đam
-                                    mê. Công ty chúng tôi có trụ sở tại Hà Nội, Việt Nam và được thành lập bởi
-                                    nhiều kỹ sư phần mềm giàu kinh nghiệm và nhiệt huyết vào năm 2020-2-4
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- .section-head -->
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="single-features">
-                                <em class="ti ti-user"></em>
-                                <h4>CHÚNG TÔI LÀ AI</h4>
-                                <p>
-                                    Chúng tôi còn trẻ. Chúng tôi xây dựng mọi thứ xung quanh "Con người". Chúng
-                                    tôi là những kỹ sư phần mềm nhanh nhẹn, đam mê cân bằng công việc / cuộc
-                                    sống. Tất cả chúng ta đều yêu thích lập trình và nghiện công nghệ mới.
-                                </p>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col-sm-6">
-                            <div class="single-features">
-                                <em class="ti ti-bolt"></em>
-                                <h4>NHIỆM VỤ CỦA CHÚNG TÔI</h4>
-                                <p>
-                                    Trở thành công ty phần mềm hàng đầu và nhà cung cấp dịch vụ gia công phần
-                                    mềm. Xây dựng mối quan hệ lâu dài với khách hàng của chúng tôi và cung cấp
-                                    dịch vụ khách hàng đặc biệt với các giải pháp sáng tạo và công nghệ tiên
-                                    tiến.
-                                </p>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col-sm-6">
-                            <div class="single-features">
-                                <em class="ti ti-comment-alt"></em>
-                                <h4>CHÚNG TÔI LÀM GÌ</h4>
-                                <p>
-                                    Chúng tôi luôn áp dụng thực tiễn tốt nhất trong quá trình phát triển phần mềm
-                                    và sử dụng công nghệ mới nhất. Chúng tôi xây dựng các kỹ sư phần mềm trẻ và
-                                    tài năng ở đẳng cấp thế giới. Chúng tôi đảm bảo sự hài lòng của khách hàng
-                                    trong khả năng của mình với chi phí hợp lý và dịch vụ bảo trì tuyệt vời được
-                                    cung cấp bởi các kỹ sư tận tâm.
-                                </p>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col-sm-6">
-                            <div class="single-features">
-                                <em class="ti ti-link"></em>
-                                <h4>CHÚNG TÔI YÊU KHÁCH HÀNG CỦA CHÚNG TÔI</h4>
-                                <p>
-                                    Chúng tôi trung thực, cởi mở và thân thiện. Chúng tôi tự hào khi được làm
-                                    việc như một phần của nhóm và xây dựng tất cả các mối quan hệ của chúng tôi
-                                    trên sự tin tưởng. Chúng tôi đam mê công việc của mình và cố gắng đạt được
-                                    sự cân bằng trong công việc / cuộc sống.
-                                </p>
-                            </div>
-                        </div><!-- .col -->
-                    </div><!-- .row -->
-                </div><!-- .col -->
-                <!-- <div class="col-md-5 pt-100 text-center">
-                    <div class="fearures-software-mockup wow fadeInLeft" data-wow-duration=".5s" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/appuntamenti.png" alt="software-screen" style="width: 550px;height:500px;margin-left:60%">
+
+<!-- Start .about-section  -->
+
+
+@{
+    var _listHome = GetDbHOME();
+}
+@foreach (var item in _listHome)
+{
+
+    <div id="About" class="about-section section pb-90 white-bg">
+        <div class="container tab-fix">
+            <div class="section-head text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading"></h2>
+                        <p>
+                            Được thành lập tháng 06/2020 với 05 thành viên chủ chốt.
+                            Chúng tôi là một đội ngũ chuyên gia lành nghề trong lĩnh vực phát triển phần mềm. Chúng tôi sử dụng niềm đam mê phát triển của mình để cung cấp các ứng dụng phần mềm tốt nhất. Với sự kết hợp của công nghệ, bí quyết và giao tiếp tuyệt vời, chúng tôi có thể tạo ra các giải pháp hoàn chỉnh cho khách hàng của mình.
+                        </p>
                     </div>
-                </div> -->
+                </div>
+            </div><!-- .section-head -->
+            <div class="row tab-center mobile-center">
+                <div class="col-md-6">
+                    <div class="txt-entry">
+                        <h3>“Life is too short for a bad software!”</h3>
+                        <p>
+                            Sứ mệnh của chúng tôi là cung cấp các giải pháp chất lượng cao nhằm mục đích thúc đẩy sự tăng trưởng kinh doanh của khách hàng bằng thiết kế sáng tạo và quy trình hiện đại - linh hoạt.
+                            Qua đó, giúp khách hàng tạo ra lợi thế cạnh tranh trên thị trường.
+                            <br />Chúng tôi cam kết cung cấp các giải pháp tối ưu với chất lượng và giá cả dịch vụ hợp lý. Đối với chúng tôi, sự hài lòng của khách hàng là ưu tiên được đặt ra hàng đầu. Nền tảng của sự phát triển và thành công của chúng tôi chính là sự thành công trong mỗi dự án của khách hàng.
+                        </p>
+
+                    </div>
+                </div><!-- .col -->
+                <div class="col-md-6">
+                    <div class="video wow fadeInRight" data-wow-duration=".5s" style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInRight;">
+                        <img src="~/Assets/image/ml.jpg" alt="about-video">
+                        <div class="video-overlay gradiant-background"></div>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .about-section  -->
+    <!-- Start .features-section  -->
+    <div id="Solutions" class="features-section section gradiant-background pb-90">
+        <div class="container tab-fix">
+            <div class="features-content pt-10">
+                <div class="row">
+                    <div class="col-md-12 pull-left">
+                        <div class="section-head heading-light mobile-center tab-center">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 class="heading heading-light">Các Giải pháp</h2>
+                                    <p>
+                                        Chúng tôi luôn phấn đấu và nỗ lực không ngừng để tổ chức và cung cấp dịch vụ ngày càng tốt hơn thông qua tập trung vào:
+                                        <br />– Con người: Đào tạo, tuyển dụng, phát triển và giữ chân nhân tài.
+                                        <br />– Quy trình: Đảm bảo chất lượng sản phẩm với thời gian và chi phí hợp lý.
+                                        <br />– Khách hàng: Giữ gìn và không ngừng nâng cao sự hài lòng của khách hàng với các dịch vụ của chúng tôi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- .section-head -->
+                        <div class="row">
+                            <div class="col-sm-6" style=" width: 48%;">
+                                <div class="single-features">
+                                    <em class="fa fa-user hidden-sm hidden-xs"></em>
+                                    <h4>CHÚNG TÔI LÀ AI</h4>
+                                    <p>
+                                        Chúng tôi trẻ và nhiệt huyết. Chúng tôi xây dựng mọi thứ xung quanh "Con người". Chúng
+                                        tôi là những kỹ sư phần mềm nhanh nhẹn, đam mê cân bằng công việc/cuộc
+                                        sống. Tất cả chúng tôi đều yêu thích lập trình và nghiện công nghệ mới.
+                                    </p>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-sm-6" style=" width: 48%;">
+                                <div class="single-features">
+                                    <em class="fa fa-bolt hidden-sm hidden-xs"></em>
+                                    <h4>NHIỆM VỤ CỦA CHÚNG TÔI</h4>
+                                    <p>
+                                        Trở thành công ty phần mềm hàng đầu và nhà cung cấp dịch vụ gia công phần
+                                        mềm. Xây dựng mối quan hệ lâu dài với khách hàng và cung cấp
+                                        dịch vụ khách hàng đặc biệt với các giải pháp sáng tạo và công nghệ tiên
+                                        tiến.
+                                    </p>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-sm-6" style=" width: 48%;">
+                                <div class="single-features">
+                                    <em class="fa fa-comment hidden-sm hidden-xs"></em>
+                                    <h4>CHÚNG TÔI LÀM GÌ</h4>
+                                    <p>
+                                        Chúng tôi luôn áp dụng thực tiễn tốt nhất và sử dụng công nghệ mới nhất trong quá trình phát triển phần mềm.
+                                        Chúng tôi xây dựng các kỹ sư phần mềm trẻ và tài năng ở đẳng cấp thế giới.
+                                        Chúng tôi đảm bảo sự hài lòng của khách hàng trong khả năng của mình với chi phí hợp lý và dịch vụ bảo trì tuyệt vời được
+                                        cung cấp bởi các kỹ sư tận tâm.
+                                    </p>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-sm-6" style=" width: 48%;">
+                                <div class="single-features">
+                                    <em class="fa fa-link hidden-sm hidden-xs"></em>
+                                    <h4>CHÚNG TÔI YÊU KHÁCH HÀNG CỦA CHÚNG TÔI</h4>
+                                    <p>
+                                        Chúng tôi trung thực, cởi mở và thân thiện. Chúng tôi tự hào khi được làm
+                                        việc như một phần của nhóm và xây dựng tất cả các mối quan hệ của chúng tôi
+                                        trên sự tin tưởng. Chúng tôi đam mê công việc của mình và cố gắng đạt được
+                                        sự cân bằng trong công việc / cuộc sống.
+                                    </p>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .col -->
+                </div>
                 <!-- .col -->
             </div><!-- .row -->
         </div><!-- .features-content -->
-    </div><!-- .container -->
-</div><!-- .features-section  -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- Team Section -->
-<div id="people" class="people-all">
-    <div class="container people">
-        <div class="row">
-            <div class="text">
-                <div class="col-md-12">
-
-                    <h2 class="title-people">Công ty chúng tôi</h2>
-                    <p>
-                        Chúng tôi là một đội ngũ chuyên gia lành nghề trong lĩnh vực phát triển phần mềm. Chúng
-                        tôi
-                        sử dụng niềm đam mê phát triển của mình để cung cấp các ứng dụng phần mềm tốt nhất. Với
-                        sự
-                        kết hợp của công nghệ, bí quyết và giao tiếp tuyệt vời, chúng tôi có thể tạo ra các giải
-                        pháp hoàn chỉnh cho khách hàng của mình.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="people animated fadeInUp visible">
-                    <div class="image-people">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/team1.jpg"
-                             alt="">
-                    </div>
-                    <div class="people-inner">
-                        <h3>Ông Phạm Quang Vinh</h3>
-                        <p>Phó Chủ tịch Hội đồng Quản trị Giám đốc công nghệ (CTO)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="people animated fadeInUp visible">
-                    <div class="image-people">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/team1.jpg"
-                             alt="">
-                    </div>
-                    <div class="people-inner">
-                        <h3>Ông Phạm Quang Vinh</h3>
-                        <p>Phó Chủ tịch Hội đồng Quản trị Giám đốc công nghệ (CTO)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="people animated fadeInUp visible">
-                    <div class="image-people">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/team1.jpg"
-                             alt="">
-                    </div>
-                    <div class="people-inner">
-                        <h3>Ông Phạm Quang Vinh</h3>
-                        <p>Phó Chủ tịch Hội đồng Quản trị Giám đốc công nghệ (CTO)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="people animated fadeInUp visible">
-                    <div class="image-people">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/team1.jpg"
-                             alt="">
-                    </div>
-                    <div class="people-inner">
-                        <h3>Ông Phạm Quang Vinh</h3>
-                        <p>Phó Chủ tịch Hội đồng Quản trị Giám đốc công nghệ (CTO)</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
-</div>
+}
 
-<!-- End Section -->
-<div id="overview" class="section pb-170">
-    <div class="container tab-fix">
-        <div class="features-content center pt-10">
-            <div class="row row-vm">
-                <div class="col-md-6">
-                    <div class="bg-circle">
-                        <div class="small"></div>
-                        <div class="big"></div>
+
+<!-- Start .statistics-section  -->
+<div class="statistics-section section section pt-20 pb-20 grey-background" id="Project">
+    <div class="container">
+        <div class="section-head text-center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="heading">Đối tác</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center regular">
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeIn project" style="background: url('/Assets/image/nssc.png');">
+
+                </div>
+            </div><!-- .col  -->
+            <div class="col-md-3 col-sm-6">
+                <div style="background: url('/Assets/image/Goapp_logo.png');" class="box wow fadeIn project">
+
+                </div>
+            </div><!-- .col  -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeIn project" style="background: url('/Assets/image/dowload.png');">
+
+                </div>
+            </div><!-- .col  -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeIn project" style="background: url('/Assets/image/cvv.png');">
+
+                </div>
+            </div><!-- .col  -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeIn project" style="background: url('/Assets/image/nhatnguyen.png');">
+
+                </div>
+            </div><!-- .col  -->
+        </div><!-- .row  -->
+    </div><!-- .container  -->
+</div><!-- Start .statistics-section  -->
+<div class="team-section section grey-background pb-90" id="Council">
+    <div class="container">
+        <div class="section-head text-center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="heading">Our <span>Team</span></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            @{
+                var _list = GetDb();
+            }
+            @foreach (var item in _list)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src=" https://bit.ly/39kwQHi" alt="team">
+                            <a href="#" class="expand-trigger content-popup"></a>
+                        </div>
+                        <div class="team-info">
+                            <h4 class="name">@item.NAME</h4>
+                            <h5 style="font-style: italic;">@item.POSITION</h5>
+                        </div>
                     </div>
-                    <img class="wow fadeInLeft" alt="" data-wow-duration=".5s"
-                         src="./Ski4you - gestionale prenotazione online scuole sci_files/sdef.png"
-                         style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
-                </div><!-- .col -->
-                <div class="col-md-5 col-md-offset-1">
-                    <h2 class="heading-row">Tin tức</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </p>
-                    <a class="button light" href="#">Xem thêm</a>
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .features-content -->
-    </div><!-- .container -->
-</div>
-<!--  -->
-<!-- section -->
-<div class="section pb-170">
-    <div class="container tab-fix">
-        <div class="features-content center pt-10">
-            <div class="row row-vm">
-                <div class="col-md-5 text-right">
-                    <h2 class="heading-row">Tuyển dụng</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </p>
-                    <a class="button light" href="#">Xem thêm</a>
-                </div><!-- .col -->
-                <div class="col-md-6 col-md-offset-1">
-                    <div class="bg-circle">
-                        <div class="small"></div>
-                        <div class="big"></div>
-                    </div>
-                    <img class="wow fadeInRight" alt="" data-wow-duration=".5s"
-                         src="./Ski4you - gestionale prenotazione online scuole sci_files/mdef.png"
-                         style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .features-content -->
-    </div><!-- .container -->
-</div>
+                </div><!-- .col  -->
+
+            }
+
+
+        </div><!-- .row  -->
+
+    </div><!-- .container  -->
+</div><!-- .team-section  -->
+<div id="Contact" class="contact-section section gradiant-background pb-90">
+    <div class="container">
+        <div class="section-head heading-light text-center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="heading heading-light">Liên hệ với chúng tôi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-form white-bg text-center">
+                    <h3>Kết nối với chúng tôi</h3>
+
+                    <form id="contact-form" class="form-message" action="" method="post" novalidate="novalidate">
+                        <div class="form-results"></div>
+                        <div class="form-group row fix-gutter-10">
+                            <div class="form-field col-sm-6 gutter-10 form-m-bttm">
+                                <input name="contact-name" type="text" placeholder="Họ tên *" class="form-control required" aria-required="true">
+                            </div>
+                            <div class="form-field col-sm-6 gutter-10">
+                                <input name="contact-email" type="email" placeholder="Email *" class="form-control required email" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group row fix-gutter-10">
+                            <div class="form-field col-md-6 gutter-10 form-m-bttm">
+                                <input name="contact-phone" type="text" placeholder="Số điện thoại *" class="form-control required" aria-required="true">
+                            </div>
+                            <div class="form-field col-md-6 gutter-10">
+                                <input name="contact-subject" type="text" placeholder="Tiêu đề *" class="form-control required" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="form-field col-md-12">
+                                <textarea name="contact-message" placeholder="Nội dung *" class="txtarea form-control required" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                        <input type="text" class="hidden" name="form-anti-honeypot" value="">
+                        <button type="submit" class="button solid-btn sb-h">Gửi</button>
+                    </form>
+                </div>
+            </div><!-- .col  -->
+            <div class="col-md-6">
+                <div class="contact-info white-bg">
+
+                    @{
+                        var _list_contact = GetDbContact();
+                    }
+                    @foreach (var item in _list_contact)
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h6><em class="fa fa-envelope"></em>@item.EMAIL</h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6><em class="fa fa-phone"></em> @item.PHONE_NUMBER</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h6><em class="fa fa-map-marker"></em> @item.ADDRESS</h6>
+                            </div>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div><!-- .col  -->
+        </div><!-- .row  -->
+    </div><!-- .container  -->
+</div><!-- .contact-section  -->

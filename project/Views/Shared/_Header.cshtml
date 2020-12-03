@@ -1,92 +1,123 @@
-﻿<div id="home" class="header-section flex-box-middle section gradiant-background header-curbed header-software">
+﻿@{
+    Layout = null;
+}
+@using project.Models;
+@functions{
+    public DataContext db = new DataContext();
+    public List<MENU> GetDb()
+    {
+        var list_menu = db.MENUs.ToList();
+        return list_menu;
+    }
+}
+@model List<MENU>
+
+<div id="home" class="header-section flex-box-middle section gradiant-background overflow-hidden">
     <div id="particles-js" class="particles-container">
-        <canvas class="particles-js-canvas-el" width="1349"
-                height="1072" style="width: 100%; height: 100%;"></canvas>
+        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
     </div>
-    <div id="navigation" class="navigation is-transparent affix-top" data-spy="affix" data-offset-top="5">
+    <div id="navigation" class="navigation is-transparent affix" data-spy="affix" data-offset-top="5">
         <nav class="navbar navbar-default">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#site-collapse-nav" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-collapse-nav" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="https://ski4you.it/gestionale/index.html">
-                        <img class="logo logo-light"
-                             src="./Ski4you - gestionale prenotazione online scuole sci_files/logo_bianco.png"
-                             alt="logo" style="width:150px;height: 250px;">
-                        <img class="logo logo-color"
-                             src="./Ski4you - gestionale prenotazione online scuole sci_files/logo.png" alt="logo"
-                             style="width:200px;height:350px">
+                    <a class="navbar-brand" href="/">
+                        <img class="logo logo-light" src="~/Assets/image/logo.png" alt="logo">
+                        <img class="logo logo-color" src="~/Assets/image/logo_bianco.png" alt="logo">
                     </a>
                 </div>
-
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse font-secondary" id="site-collapse-nav">
-                    <ul class="nav nav-list navbar-nav navbar-right">
-                        <li class="nav-item active">
-                            <a href="#">Trang chủ</a>
 
+                    <ul class="nav nav-list navbar-nav navbar-right">
+                        @{
+                            var _list = GetDb();
+                        }
+                        @foreach (var item in _list)
+                         
+                            {
+                        <li>
+                            @*class="active"*@
+                            <a href="" class="nav-item">@item.NAME</a>
                         </li>
-                        <li><a class="nav-item" href="#">Giới thiệu</a></li>
-                        <li><a class="nav-item" href="#">Trong khoảng</a></li>
-                        <li><a class="nav-item" href="#">Đội</a></li>
-                        <li><a class="nav-item" href="#">Dịch vụ</a></li>
-                        <li><a class="nav-item" href="#">Lãnh đạo</a></li>
-                        <li><a class="nav-item" href="#">Liên hệ</a></li>
+                            }
+
+
+
+
+
                     </ul>
+                    @*<script src="~/Content/js/layout.js"></script>*@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
         </nav>
     </div><!-- .navigation -->
 
-    <div class="header-content pt-90">
+    <div class="header-content">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-12">
                     <div class="header-texts">
-                        <h2 class="cd-headline clip is-full-width wow fadeInUp" data-wow-duration=".5s"
-                            style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">
-                            <br>
-                            <span class="cd-words-wrapper" style="width: 550px;">
-                                <b class="is-visible">Dịch vụ gia công phần mềm</b>
-                                <b class="is-hidden">Dịch vụ phát triển phần mềm</b>
-                                <b class="is-hidden">Trung tâm phát triển nước ngoài</b>
-                                <br class="is-hidden">
+                        <h1 class="cd-headline clip is-full-width wow fadeInUp">
+                            <span>ONES Solutions</span>
+                            <br />
+                            <span class="cd-words-wrapper">
+                                <i class="is-visible">“Just a second”</i>
                             </span>
-                            <br>
-                            <span>Giải pháp phần mềm </span>
-                            <br>
-
-
-                        </h2>
-                        <p class="lead wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s"
-                           style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
+                        </h1>
+                        <p class="lead wow fadeInUp">
+                            ONES là một mạng lưới kết nối các con người nhiệt huyết, trẻ trung và đam mê. Công ty chúng tôi được thành lập bởi nhiều kỹ sư phần mềm giàu kinh nghiệm và sáng tạo, cộng với đội ngũ chuyên gia cố vấn hoạt động trong lĩnh vực công nghệ thông tin, tài chính và tư vấn giải pháp.
+                            Chúng tôi mong muốn mang đến các giải pháp tiên tiến giúp khách hàng làm việc hiệu quả hơn, phát triển nhanh hơn, cung cấp cái nhìn sâu sắc hơn để khách hàng tạo ra hiệu suất tối đa trong công việc.
+                            Góp phần đóng góp trong công cuộc ứng dụng CNTT cho một xã hội thông minh và phát triển.
                         </p>
 
                     </div>
                 </div><!-- .col -->
             </div><!-- .row -->
-            <div class="row text-center">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="header-laptop-mockup wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s"
-                         style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s; animation-name: fadeInUp;">
-                        <img src="./Ski4you - gestionale prenotazione online scuole sci_files/calendario.png"
-                             alt="software-screen">
-                    </div>
-                </div>
-            </div>
         </div><!-- .container -->
     </div><!-- .header-content -->
 </div>
-
+<div class="feature-boxes">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeInUp" data-wow-duration=".5s">
+                    <div class="box-icon">
+                        <em class="fa fa-user"></em>
+                    </div>
+                    <h4><a href="#">Developers</a></h4>
+                </div>
+            </div><!-- .col -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s">
+                    <div class="box-icon">
+                        <em class="fa fa-tasks"></em>
+                    </div>
+                    <h4><a href="#">Dự án</a></h4>
+                </div>
+            </div><!-- .col -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".6s">
+                    <div class="box-icon">
+                        <em class="fa fa-star"></em>
+                    </div>
+                    <h4><a href="#">Chuyên gia</a></h4>
+                </div>
+            </div><!-- .col -->
+            <div class="col-md-3 col-sm-6">
+                <div class="box wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".9s">
+                    <div class="box-icon">
+                        <em class="fa fa-link"></em>
+                    </div>
+                    <h4><a href="#">Đối tác</a></h4>
+                </div>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</div><!-- .header-features -->

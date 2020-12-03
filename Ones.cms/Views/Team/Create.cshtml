@@ -1,0 +1,30 @@
+﻿@Model
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="text-center">ADD TEAM</h2>
+        </div>
+        <div class="panel-body" style="margin-left:20%;">
+            <form action="" method="post">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        <input name="NAME" value="@if (Model != null) { <text>@Model["NAME"]</text> }" type="text" class="form-control" id="NAME" placeholder="Bạn muốn thêm mới?">
+                    </div>
+
+                    <div class="col-md-10">
+                        <input name="POSITION" value="@if (Model != null) { <text>@Model["POSITION"]</text> }" type="text" class="form-control" id="POSITION" placeholder="Bạn muốn thêm mới?">
+                    </div>
+
+                    <div class="col-md-10">
+                        <input name="IMAGE" value="@if (Model != null) { <text>@Model["IMAGE"]</text> }" type="file" class="form-control" id="IMAGE" placeholder="Bạn muốn thêm mới?">
+                    </div>
+                </div><br />
+                <div class="col-md-2" style="margin:3% 0 0 1%;">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

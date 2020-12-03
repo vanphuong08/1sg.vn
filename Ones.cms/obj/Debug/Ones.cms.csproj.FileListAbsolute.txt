@@ -70,3 +70,11 @@ D:\1sg.vn\Ones.cms\obj\Debug\Ones.cms.csproj.CoreCompileInputs.cache
 D:\1sg.vn\Ones.cms\obj\Debug\Ones.cms.csproj.CopyComplete
 D:\1sg.vn\Ones.cms\obj\Debug\Ones.cms.dll
 D:\1sg.vn\Ones.cms\obj\Debug\Ones.cms.pdb
+D:\1sg.vn\Ones.cms\bin\EntityFramework.dll
+D:\1sg.vn\Ones.cms\bin\EntityFramework.SqlServer.dll
+D:\1sg.vn\Ones.cms\bin\EntityFramework.xml
+D:\1sg.vn\Ones.cms\bin\EntityFramework.SqlServer.xml
+D:\1sg.vn\Ones.cms\bin\PagedList.dll
+D:\1sg.vn\Ones.cms\bin\PagedList.Mvc.dll
+D:\1sg.vn\Ones.cms\bin\PagedList.xml
+D:\1sg.vn\Ones.cms\bin\PagedList.Mvc.xml

@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\project\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\project\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\project\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\project\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -45,7 +46,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\project\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\project\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\project\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\project\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -101,6 +114,7 @@
     <Content Include="Assets\build\images\loading.gif" />
     <Content Include="Assets\build\js\custom.js" />
     <Content Include="Assets\build\js\custom.min.js" />
+    <Content Include="Assets\images\img.jpg" />
     <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-grid.css" />
     <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-grid.min.css" />
     <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-reboot.css" />
@@ -111,8 +125,17 @@
     <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.js" />
     <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\vendors\fastclick\lib\fastclick.js" />
+    <Content Include="Assets\vendors\font-awesome\.gitignore" />
     <Content Include="Assets\vendors\font-awesome\css\font-awesome.css" />
     <Content Include="Assets\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendors\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Assets\vendors\fontawesome\.gitignore" />
+    <Content Include="Assets\vendors\fontawesome\css\font-awesome.css" />
+    <Content Include="Assets\vendors\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendors\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendors\fontawesome\HELP-US-OUT.txt" />
     <Content Include="Assets\vendors\iCheck\icheck.js" />
     <Content Include="Assets\vendors\iCheck\icheck.min.js" />
     <Content Include="Assets\vendors\iCheck\skins\flat\aero%402x.png" />
@@ -148,6 +171,7 @@
     <Content Include="Assets\vendors\iCheck\skins\flat\_all.css" />
     <Content Include="Assets\vendors\jquery\dist\jquery.js" />
     <Content Include="Assets\vendors\jquery\dist\jquery.min.js" />
+    <Content Include="Assets\vendors\nprogress\nprogress.css" />
     <Content Include="Assets\vendors\nprogress\nprogress.js" />
     <Content Include="Assets\vendors\nprogress\support\extras.css" />
     <Content Include="Assets\vendors\nprogress\support\style.css" />
@@ -155,6 +179,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -171,7 +196,78 @@
     <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.js.map" />
     <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.min.js.map" />
     <Content Include="Assets\vendors\jquery\dist\jquery.min.map" />
+    <Content Include="Assets\vendors\font-awesome\.bower.json" />
+    <Content Include="Assets\vendors\font-awesome\.npmignore" />
+    <Content Include="Assets\vendors\font-awesome\bower.json" />
     <Content Include="Assets\vendors\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendors\font-awesome\less\animated.less" />
+    <Content Include="Assets\vendors\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\vendors\font-awesome\less\core.less" />
+    <Content Include="Assets\vendors\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\vendors\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\vendors\font-awesome\less\icons.less" />
+    <Content Include="Assets\vendors\font-awesome\less\larger.less" />
+    <Content Include="Assets\vendors\font-awesome\less\list.less" />
+    <Content Include="Assets\vendors\font-awesome\less\mixins.less" />
+    <Content Include="Assets\vendors\font-awesome\less\path.less" />
+    <Content Include="Assets\vendors\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\vendors\font-awesome\less\screen-reader.less" />
+    <Content Include="Assets\vendors\font-awesome\less\stacked.less" />
+    <Content Include="Assets\vendors\font-awesome\less\variables.less" />
+    <Content Include="Assets\vendors\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_animated.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_variables.scss" />
+    <Content Include="Assets\vendors\fontawesome\.bower.json" />
+    <Content Include="Assets\vendors\fontawesome\.npmignore" />
+    <Content Include="Assets\vendors\fontawesome\bower.json" />
+    <Content Include="Assets\vendors\fontawesome\css\font-awesome.css.map" />
+    <Content Include="Assets\vendors\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendors\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendors\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendors\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendors\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendors\fontawesome\less\animated.less" />
+    <Content Include="Assets\vendors\fontawesome\less\bordered-pulled.less" />
+    <Content Include="Assets\vendors\fontawesome\less\core.less" />
+    <Content Include="Assets\vendors\fontawesome\less\fixed-width.less" />
+    <Content Include="Assets\vendors\fontawesome\less\font-awesome.less" />
+    <Content Include="Assets\vendors\fontawesome\less\icons.less" />
+    <Content Include="Assets\vendors\fontawesome\less\larger.less" />
+    <Content Include="Assets\vendors\fontawesome\less\list.less" />
+    <Content Include="Assets\vendors\fontawesome\less\mixins.less" />
+    <Content Include="Assets\vendors\fontawesome\less\path.less" />
+    <Content Include="Assets\vendors\fontawesome\less\rotated-flipped.less" />
+    <Content Include="Assets\vendors\fontawesome\less\stacked.less" />
+    <Content Include="Assets\vendors\fontawesome\less\variables.less" />
+    <Content Include="Assets\vendors\fontawesome\scss\font-awesome.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_animated.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_core.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_icons.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_larger.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_list.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_mixins.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_path.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_stacked.scss" />
+    <Content Include="Assets\vendors\fontawesome\scss\_variables.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -182,10 +278,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PartnerController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CONTACT.cs" />
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\FEEDBACK.cs" />
+    <Compile Include="Models\HOME.cs" />
+    <Compile Include="Models\MENU.cs" />
+    <Compile Include="Models\PARTNER.cs" />
+    <Compile Include="Models\TEAM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,9 +310,21 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Menu\Menu.cshtml" />
+    <Content Include="Views\Menu\Create.cshtml" />
+    <Content Include="Views\Feedbacks\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Contacts\Create.cshtml" />
+    <Content Include="Views\Partner\Index.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Team\Create.cshtml" />
+    <Content Include="Views\Partner\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -213,7 +334,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Assets\Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -249,7 +370,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\project\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\project\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\project\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\project\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\project\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\project\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\project\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\project\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

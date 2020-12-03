@@ -1,0 +1,28 @@
+﻿@Model
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="text-center">ADD MENU</h2>
+        </div>
+        <div class="panel-body" style="margin-left:20%;">
+            <form action="" method="post">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    
+                    <div class="col-md-10">
+                        <input name="EMAIL" value="@if (Model != null) { <text>@Model["EMAIL"]</text> }" type="text" class="form-control" id="EMAIL" placeholder="Bạn muốn sửa?">
+                    </div>
+                    <div class="col-md-10">
+                        <input name="PHONE_NUMBER" value="@if (Model != null) { <text>@Model["PHONE_NUMBER"]</text> }" type="text" class="form-control" id="PHONE_NUMBER" placeholder="Bạn muốn sửa?">
+                    </div>
+                    <div class="col-md-10">
+                        <input name="ADDRESS" value="@if (Model != null) { <text>@Model["ADDRESS"]</text> }" type="text" class="form-control" id="ADDRESS" placeholder="Bạn muốn sửa?">
+                    </div>
+                </div><br />
+                <div class="col-md-2" style="margin:3% 0 0 1%;">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
